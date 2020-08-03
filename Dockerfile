@@ -19,7 +19,8 @@ RUN set -xe  && \
         ca-certificates \
         ffmpeg \
         openssl \
-        python3 && \
+        python3 \
+        py3-pip && \
     pip3 install youtube-dl
 
 WORKDIR /data

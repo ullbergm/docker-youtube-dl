@@ -29,7 +29,8 @@ RUN mkdir -p /scripts && \
     wget https://github.com/TheFrenchGhosty/TheFrenchGhostys-YouTube-DL-Archivist-Scripts/archive/2.2.0.tar.gz -O /tmp/scripts.tar.gz && \
     tar -xzf /tmp/scripts.tar.gz && \
     mv TheFrenchGhostys-YouTube-DL-Archivist-Scripts-*/Linux*/* . && \
-    rm -rf /tmp/scripts.tar.gz TheFrenchGhostys-YouTube-DL-Archivist-Scripts-*
+    rm -rf /tmp/scripts.tar.gz TheFrenchGhostys-YouTube-DL-Archivist-Scripts-* && \
+    sed -i 's/--write-thumbnail --embed-thumbnail//g' */*/*.sh
 
 WORKDIR /data
 

@@ -30,7 +30,7 @@ RUN mkdir -p /scripts && \
     tar -xzf /tmp/scripts.tar.gz && \
     mv TheFrenchGhostys-YouTube-DL-Archivist-Scripts-*/Linux*/* . && \
     rm -rf /tmp/scripts.tar.gz TheFrenchGhostys-YouTube-DL-Archivist-Scripts-* && \
-    sed -i 's/--write-thumbnail --embed-thumbnail//g' */*/*.sh
+    sed -i 's/--write-thumbnail --embed-thumbnail/--abort-on-error/g' */*/*.sh
 
 WORKDIR /data
 

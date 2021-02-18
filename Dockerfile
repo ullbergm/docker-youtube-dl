@@ -17,6 +17,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 RUN set -xe  && \
     apk add --no-cache \
         ca-certificates \
+        openssl \
         ffmpeg \
         curl \
         jq \
